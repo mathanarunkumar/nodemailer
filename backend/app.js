@@ -9,8 +9,6 @@ const cors =require('cors')
 dotenv.config({ path: path.join(__dirname, 'config', 'config.env') });
 
 // Import routes
-
-// const regroute = require("./routes/register-route")
 const userController = require('../backend/routes/user-routes')
 
 
@@ -19,7 +17,6 @@ app.use(express.json());
 app.use(cors())
 
 // Use routes
-// app.use('/api/v1/', regroute);
 app.use('/api/v1/', userController);
 
 
